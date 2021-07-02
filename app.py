@@ -8,7 +8,7 @@ import numpy as np
 
 app = Flask(__name__)
 
-dic = {0 : 'Esca', 1 : 'Healthy'}
+dic = {0 : 'Vigne avec Esca', 1 : 'Vigne saine'}
 
 model = tf.keras.models.load_model('model_voltron.h5')
 model.compile(loss='binary_crossentropy',
