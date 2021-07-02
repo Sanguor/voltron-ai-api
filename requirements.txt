@@ -1,4 +1,4 @@
 flask
 gunicorn
 keras
-tensorflow
+tensorflow.keras
