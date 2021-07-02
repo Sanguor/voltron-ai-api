@@ -2,3 +2,4 @@ flask
 gunicorn
 keras
 tensorflow-cpu
+pillow
