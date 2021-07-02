@@ -1,4 +1,4 @@
 flask
 gunicorn
 keras
-tensorflow.keras
+tensorflow-cpu
