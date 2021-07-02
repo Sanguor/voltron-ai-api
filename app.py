@@ -18,7 +18,7 @@ model.make_predict_function()
 
 def predict_label(img_path):
 	i = image.load_img(img_path, target_size=(320, 180))
-	i = image.img_to_array(i)/255.0
+	i = image.img_to_array(i, data_format=None, dtype=None)/255.0
 	i = i.reshape(1, 320,180,3)
 	p = model.predict_classes(i)
 	return dic[p[0]]
