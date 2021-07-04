@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
-from keras.models import load_model
-from keras.preprocessing import image
+from tensorflow.keras.models import load_model
+from tensorflow.keras.preprocessing import image
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
 import tensorflow as tf
@@ -24,8 +24,8 @@ def predict_label(img_path):
     p = model.predict_classes(i)    
     return dic[p[0]]
 
+    
 
-# routes
 @app.route("/")
 def index():
 	return render_template("index.html")
@@ -45,4 +45,5 @@ def get_output():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # use 0.0.0.0 to use it in container
+    app.run(host='0.0.0.0')
